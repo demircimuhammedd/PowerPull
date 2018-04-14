@@ -28,10 +28,7 @@ namespace PowerPull.Scraping
 
             Scrap(listDetailUrl, web, listContent); 
 
-            ApiHelper.SaveBlogAsync(listContent).GetAwaiter().GetResult();
-
-
-            //FileHelper.SaveFile(listContent, "Hypebeast");
+            ApiHelper.SaveBlogAsync(listContent).GetAwaiter().GetResult(); 
         }
 
         private static void Scrap(List<string> listDetailUrl, HtmlWeb web, List<Content> listContent)

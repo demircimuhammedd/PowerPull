@@ -26,8 +26,8 @@ namespace PowerPull.Scraping
 
       Scrap(listDetailUrl, web, listContent);
       Console.WriteLine("Kaydedilebilen makale sayısı: {0}", listContent.Count);
-      ApiHelper.SaveBlogAsync(listContent).GetAwaiter().GetResult();
-      //FileHelper.SaveFile(listContent, "Elle");
+
+      ApiHelper.SaveBlogAsync(listContent).GetAwaiter().GetResult(); 
     }
 
     private static List<string> DetailUrlCrawler(int page, int count, HtmlWeb web)
